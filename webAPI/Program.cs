@@ -36,7 +36,7 @@ builder.Services.AddDbContext<giaoTiepCSDL>(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularDev",
-        builder => builder.WithOrigins("http://localhost:4200")
+        builder => builder.AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
